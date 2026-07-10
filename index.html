@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTDB Profile Save Editor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>🎈</text></svg>">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1><span class="emoji">🎈</span> BTD Battles Profile Save Editor</h1>
+      <p class="subtitle">Decrypt, edit, and re-encrypt <code>Profile.save</code>. All in the browser.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <div id="drop-zone" class="drop-zone">
+          <div class="drop-content">
+            <span class="drop-icon">📂</span>
+            <p>Drop a <code>Profile.save</code> here, or click to browse</p>
+          </div>
+          <input type="file" id="file-input" accept=".save,.dat,.bin,.json" hidden>
+        </div>
+        <div class="drop-info" id="file-info" hidden>
+          <span id="file-name"></span>
+          <span id="file-size"></span>
+          <button id="clear-file-btn" class="clear-btn" title="Clear file">&times;</button>
+        </div>
+        <p class="path-hint">
+          Steam path:
+          <code>Steam\userdata\[steamid]\444640\local\Data\Docs\64878ecb93c456c059ea530d</code>
+        </p>
+      </section>
+      <section id="actions" class="card" hidden>
+        <div class="action-row">
+          <button id="decrypt-btn" class="btn btn-primary">Decrypt Save</button>
+          <button id="validate-btn" class="btn btn-secondary">Validate CRC</button>
+          <span class="status-badge" id="crc-status"></span>
+        </div>
+      </section>
+      <section id="editor-section" class="card" hidden>
+        <div class="editor-toolbar">
+          <div class="view-toggle">
+            <button id="view-tree-btn" class="btn-view active">🌳 Tree</button>
+            <button id="view-raw-btn" class="btn-view">{} Raw</button>
+          </div>
+          <div id="search-bar" class="search-bar">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="search-input" placeholder="Search fields..." spellcheck="false">
+            <span id="search-count" class="search-count"></span>
+          </div>
+          <div class="quick-actions">
+            <button id="sanitize-btn" class="btn btn-sm btn-action">Sanitize Save</button>
+            <button id="set-medallions-btn" class="btn btn-sm btn-action">Set Medallions</button>
+            <button id="set-premiums-btn" class="btn btn-sm btn-action">Set Premiums</button>
+            <button id="set-farmers-btn" class="btn btn-sm btn-action">Set Farmers</button>
+            <button id="set-battle-score-btn" class="btn btn-sm btn-action">Set Battle Score</button>
+          </div>
+        </div>
+        <div id="tree-view" class="tree-view"></div>
+        <textarea id="json-editor" spellcheck="false" wrap="off" hidden></textarea>
+
+        <div class="editor-footer">
+          <span id="json-status" class="status-badge"></span>
+          <div class="footer-actions">
+            <button id="encrypt-btn" class="btn btn-primary">Encrypt &amp; Download</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Based on <a href="https://github.com/TDToolbox/BTDToolbox" target="_blank">BTDToolbox</a>
+        &middot; <a href="https://www.unknowncheats.me/forum/other-games/590375-bloons-td-battles-profile-save-decoder-encoder-josn.html" target="_blank">NK CRC32 format</a>
+        &middot; File never leaves your browser
+      </p>
+    </footer>
+  </div>
+  <dialog id="modal-dialog" class="modal-card">
+    <div class="modal-header">
+      <span id="modal-title" class="modal-title"></span>
+    </div>
+    <div id="modal-body" class="modal-body"></div>
+    <div class="modal-footer">
+      <button id="modal-cancel-btn" class="btn btn-secondary">Cancel</button>
+      <button id="modal-confirm-btn" class="btn btn-primary">Confirm</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
