@@ -17,4 +17,9 @@ Decrypt, edit, and re-encrypt Bloons TD Battles `Profile.save` files in the brow
 Steam\userdata\[steamid]\444640\local\Data\Docs\64878ecb93c456c059ea530d
 ```
 
+**Android path:**
+```
+/data/data/com.ninjakiwi.bloonstdbattles/files/64878ecb93c456c059ea530d/
+```
+
 Close the game before replacing the file. Keep a backup of the original `Profile.save`.
