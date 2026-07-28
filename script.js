@@ -1,5 +1,6 @@
 import { nkDecrypt, nkEncrypt } from './nk-crypto.mjs';
 import { setByPath } from './json-path.mjs';
+import catalogs from './catalogs.json' with { type: 'json' };
 
 function isValidJSON(str) {
   try { JSON.parse(str); return true; } catch { return false; }
@@ -36,6 +37,12 @@ const setPremiumsBtn   = document.getElementById('set-premiums-btn');
 const setFarmersBtn    = document.getElementById('set-farmers-btn');
 const setBattleScoreBtn = document.getElementById('set-battle-score-btn');
 const encryptBtn      = document.getElementById('encrypt-btn');
+const catalogCategory = document.getElementById('catalog-category');
+const catalogFilter   = document.getElementById('catalog-filter');
+const catalogList     = document.getElementById('catalog-list');
+const catalogStatus   = document.getElementById('catalog-status');
+const catalogAddBtn   = document.getElementById('catalog-add-btn');
+const catalogRemoveBtn = document.getElementById('catalog-remove-btn');
 
 const modalDialog    = document.getElementById('modal-dialog');
 const modalTitle     = document.getElementById('modal-title');
@@ -184,6 +191,7 @@ function doDecrypt() {
   decryptedJSON = JSON.parse(jsonStr);
   editorSection.hidden = false;
   switchToTreeView();
+  renderCatalogPanel();
 }
 
 function switchToTreeView() {
@@ -498,21 +506,15 @@ searchInput.addEventListener('input', () => {
   renderTree();
 });
 
-// Incomplete catalog; extend when new IDs show up in saves
-const PREMIUM_CATALOG = [
-  { id: 'ClubRoomEntry', label: 'Club Room Entry' },
-  { id: 'CobraTower', label: 'Cobra Tower' },
-  { id: 'RemoveAdverts', label: 'Remove Ads' },
-];
+function catalogById(id) {
+  return catalogs.categories.find((c) => c.id === id);
+}
 
-const PREMIUM_CATALOG_IDS = new Set(PREMIUM_CATALOG.map(p => p.id));
+const PREMIUM_CATALOG = (catalogById('premiums')?.items ?? []).map(({ id, label }) => ({ id, label }));
+const PREMIUM_CATALOG_IDS = new Set(PREMIUM_CATALOG.map((p) => p.id));
 
-const FARMER_CATALOG = [
-  { id: 'MonkeyFarmer', label: 'Monkey Farmer' },
-  { id: 'RoboFarmer', label: 'Robo Farmer' },
-];
-
-const FARMER_CATALOG_IDS = new Set(FARMER_CATALOG.map(f => f.id));
+const FARMER_CATALOG = (catalogById('farmers')?.items ?? []).map(({ id, label }) => ({ id, label }));
+const FARMER_CATALOG_IDS = new Set(FARMER_CATALOG.map((f) => f.id));
 
 function parseNonNegativeInt(raw) {
   const val = parseInt(raw, 10);
@@ -632,10 +634,196 @@ function applyEdit(fn) {
       jsonEditor.value = JSON.stringify(decryptedJSON, null, 2);
       validateJSON();
     }
+    renderCatalogPanel();
   } catch {
     /* ignore */
   }
 }
+
+function ensurePathParent(obj, pathStr) {
+  const parts = pathStr.split('.');
+  let cur = obj;
+  for (let i = 0; i < parts.length - 1; i++) {
+    const key = parts[i];
+    if (cur[key] == null || typeof cur[key] !== 'object') cur[key] = {};
+    cur = cur[key];
+  }
+  return { parent: cur, key: parts[parts.length - 1] };
+}
+
+function getPathValue(obj, pathStr) {
+  const parts = pathStr.split('.');
+  let cur = obj;
+  for (const key of parts) {
+    if (cur == null || typeof cur !== 'object') return undefined;
+    cur = cur[key];
+  }
+  return cur;
+}
+
+function ownedIdsForCategory(category, obj) {
+  const owned = new Set();
+  if (!obj) return owned;
+  const value = getPathValue(obj, category.path);
+
+  if (category.kind === 'stringList') {
+    if (Array.isArray(value)) for (const id of value) owned.add(String(id));
+    return owned;
+  }
+
+  if (category.kind === 'indexList') {
+    if (Array.isArray(value)) for (const id of value) owned.add(String(id));
+    return owned;
+  }
+
+  if (category.kind === 'towerUpgrades') {
+    if (Array.isArray(value)) {
+      for (const entry of value) {
+        if (Array.isArray(entry) && entry[0] != null) owned.add(String(entry[0]));
+      }
+    }
+    return owned;
+  }
+
+  if (category.kind === 'towerInventory') {
+    const map = parseTowerInventory(value);
+    for (const [id, amount] of Object.entries(map)) {
+      if (amount > 0) owned.add(id);
+    }
+    return owned;
+  }
+
+  return owned;
+}
+
+function applyCatalogIds(obj, category, ids, mode) {
+  const { parent, key } = ensurePathParent(obj, category.path);
+  const selected = ids.map(String);
+
+  if (category.kind === 'stringList') {
+    const current = Array.isArray(parent[key]) ? parent[key].map(String) : [];
+    const set = new Set(current);
+    if (mode === 'add') for (const id of selected) set.add(id);
+    else for (const id of selected) set.delete(id);
+    parent[key] = [...set];
+    return;
+  }
+
+  if (category.kind === 'indexList') {
+    const current = Array.isArray(parent[key]) ? parent[key].map(Number) : [];
+    const set = new Set(current);
+    if (mode === 'add') for (const id of selected) set.add(Number(id));
+    else for (const id of selected) set.delete(Number(id));
+    parent[key] = [...set].sort((a, b) => a - b);
+    return;
+  }
+
+  if (category.kind === 'towerUpgrades') {
+    const current = Array.isArray(parent[key]) ? [...parent[key]] : [];
+    const byTower = new Map();
+    for (const entry of current) {
+      if (Array.isArray(entry) && entry[0] != null) byTower.set(String(entry[0]), Number(entry[1]) || 0);
+    }
+    if (mode === 'add') {
+      const towersPath = ensurePathParent(obj, 'Unlocks.Towers');
+      const towers = Array.isArray(towersPath.parent[towersPath.key])
+        ? towersPath.parent[towersPath.key].map(String)
+        : [];
+      const towerSet = new Set(towers);
+      for (const id of selected) {
+        byTower.set(id, 4);
+        towerSet.add(id);
+      }
+      towersPath.parent[towersPath.key] = [...towerSet];
+    } else {
+      for (const id of selected) byTower.delete(id);
+    }
+    parent[key] = [...byTower.entries()].map(([id, tier]) => [id, tier]);
+    return;
+  }
+
+  if (category.kind === 'towerInventory') {
+    const map = parseTowerInventory(parent[key]);
+    const extraTypes = Object.keys(map).filter((id) => !FARMER_CATALOG_IDS.has(id));
+    if (mode === 'add') {
+      for (const id of selected) {
+        map[id] = map[id] > 0 ? map[id] : 1;
+      }
+    } else {
+      for (const id of selected) map[id] = 0;
+    }
+    parent[key] = buildTowerInventory(map, extraTypes);
+  }
+}
+
+function initCatalogPanel() {
+  catalogCategory.innerHTML = catalogs.categories.map((c) =>
+    `<option value="${escapeHtml(c.id)}">${escapeHtml(c.label)} (${c.items.length})</option>`
+  ).join('');
+  catalogCategory.addEventListener('change', renderCatalogPanel);
+  catalogFilter.addEventListener('input', renderCatalogPanel);
+  catalogAddBtn.addEventListener('click', () => mutateCatalogSelection('add'));
+  catalogRemoveBtn.addEventListener('click', () => mutateCatalogSelection('remove'));
+  renderCatalogPanel();
+}
+
+function selectedCatalogIds() {
+  return [...catalogList.querySelectorAll('input[type="checkbox"]:checked')].map((el) => el.value);
+}
+
+function mutateCatalogSelection(mode) {
+  if (!decryptedJSON) {
+    catalogStatus.textContent = 'Decrypt a save first.';
+    return;
+  }
+  const category = catalogById(catalogCategory.value);
+  if (!category?.apply) {
+    catalogStatus.textContent = 'This category is browse-only.';
+    return;
+  }
+  const ids = selectedCatalogIds();
+  if (!ids.length) {
+    catalogStatus.textContent = 'Select one or more items.';
+    return;
+  }
+  applyEdit((obj) => {
+    applyCatalogIds(obj, category, ids, mode);
+  });
+  catalogStatus.textContent = `${mode === 'add' ? 'Added' : 'Removed'} ${ids.length} → ${category.path}`;
+}
+
+function renderCatalogPanel() {
+  const category = catalogById(catalogCategory.value) || catalogs.categories[0];
+  if (!category) return;
+
+  const q = catalogFilter.value.trim().toLowerCase();
+  const owned = ownedIdsForCategory(category, decryptedJSON);
+  const items = category.items.filter((item) => {
+    if (!q) return true;
+    return item.id.toLowerCase().includes(q) || String(item.label).toLowerCase().includes(q);
+  });
+
+  catalogList.innerHTML = items.map((item) => {
+    const isOwned = owned.has(String(item.id));
+    return `<label class="catalog-item${isOwned ? ' is-owned' : ''}">
+      <input type="checkbox" value="${escapeHtml(item.id)}">
+      <span class="catalog-item-text">
+        <span class="catalog-item-label">${escapeHtml(item.label)}</span>
+        <span class="catalog-item-id">${escapeHtml(item.id)}</span>
+      </span>
+      ${isOwned ? '<span class="catalog-item-owned">in save</span>' : ''}
+    </label>`;
+  }).join('');
+
+  const ownedCount = items.filter((item) => owned.has(String(item.id))).length;
+  catalogStatus.textContent = decryptedJSON
+    ? `${items.length} shown · ${ownedCount} already in save · ${category.path}`
+    : `${items.length} shown · decrypt a save to Add/Remove`;
+
+  catalogAddBtn.disabled = !decryptedJSON || !category.apply;
+  catalogRemoveBtn.disabled = !decryptedJSON || !category.apply;
+}
+
 
 sanitizeBtn.addEventListener('click', () => {
   applyEdit(obj => { sanitizeSave(obj); });
@@ -907,3 +1095,4 @@ encryptBtn.addEventListener('click', () => {
 
 validateBtn.addEventListener('click', validateCRCOnly);
 decryptBtn.addEventListener('click', doDecrypt);
+initCatalogPanel();

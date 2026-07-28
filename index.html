@@ -62,6 +62,33 @@
         <div id="tree-view" class="tree-view"></div>
         <textarea id="json-editor" spellcheck="false" wrap="off" hidden></textarea>
 
+        <section id="catalog-panel" class="catalog-panel" aria-label="Known game data">
+          <div class="catalog-toolbar">
+            <div class="catalog-title-block">
+              <h2 class="catalog-title">Known from game data</h2>
+              <p class="catalog-sub">IDs and labels extracted from the client <code>data.jet</code>. Select items, then Add or Remove on the open save.</p>
+            </div>
+            <div class="catalog-controls">
+              <label class="catalog-field">
+                <span>Category</span>
+                <select id="catalog-category"></select>
+              </label>
+              <label class="catalog-field catalog-field-grow">
+                <span>Filter</span>
+                <input type="search" id="catalog-filter" placeholder="Filter by name or id…" spellcheck="false">
+              </label>
+            </div>
+          </div>
+          <div id="catalog-list" class="catalog-list"></div>
+          <div class="catalog-footer">
+            <span id="catalog-status" class="catalog-status"></span>
+            <div class="catalog-actions">
+              <button type="button" id="catalog-add-btn" class="btn btn-sm btn-action">Add selected</button>
+              <button type="button" id="catalog-remove-btn" class="btn btn-sm btn-secondary">Remove selected</button>
+            </div>
+          </div>
+        </section>
+
         <div class="editor-footer">
           <span id="json-status" class="status-badge"></span>
           <div class="footer-actions">

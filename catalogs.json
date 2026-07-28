@@ -1,0 +1,1773 @@
+{
+  "generatedAt": "2026-07-28T07:26:24.877Z",
+  "source": "Assets/JSON (unpacked data.jet)",
+  "categories": [
+    {
+      "id": "premiums",
+      "label": "Premiums",
+      "path": "Items.Premiums",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "BattlesChampion",
+          "label": "Battles Champion Pack"
+        },
+        {
+          "id": "BattlesMaster",
+          "label": "Battles Master Pack"
+        },
+        {
+          "id": "ChatPack_Pack2",
+          "label": "Chat Pack"
+        },
+        {
+          "id": "ClanCreation",
+          "label": "Clan Creation"
+        },
+        {
+          "id": "CleanSlate",
+          "label": "Clean Slate"
+        },
+        {
+          "id": "ClubStarterPack",
+          "label": "Club Starter Pack"
+        },
+        {
+          "id": "ClubStarterPackMobile",
+          "label": "Club Starter Pack"
+        },
+        {
+          "id": "CobraTower",
+          "label": "COBRA TOWER"
+        },
+        {
+          "id": "PowerCell",
+          "label": "Power Cell"
+        },
+        {
+          "id": "RemoveAdverts",
+          "label": "Remove Ads"
+        },
+        {
+          "id": "StarterPack",
+          "label": "Starter Pack"
+        },
+        {
+          "id": "ClubRoomEntry",
+          "label": "Unlimited Club Access"
+        },
+        {
+          "id": "ClubRoomEntryPlus",
+          "label": "Unlimited Club Access+"
+        },
+        {
+          "id": "ClanWarChestAmplifier",
+          "label": "War Chest Amplifier"
+        }
+      ]
+    },
+    {
+      "id": "towers",
+      "label": "Towers",
+      "path": "Unlocks.Towers",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "BananaFarm",
+          "label": "Banana Farm",
+          "rank": 16
+        },
+        {
+          "id": "Bloonchipper",
+          "label": "Bloonchipper",
+          "rank": 0
+        },
+        {
+          "id": "BombTower",
+          "label": "Bomb Tower",
+          "rank": 7
+        },
+        {
+          "id": "BoomerangThrower",
+          "label": "Boomerang Thrower",
+          "rank": 4
+        },
+        {
+          "id": "CobraMonkey",
+          "label": "Cobra Monkey",
+          "rank": 3
+        },
+        {
+          "id": "DartMonkey",
+          "label": "Dart Monkey",
+          "rank": 0
+        },
+        {
+          "id": "DartlingGun",
+          "label": "Dartling Gun",
+          "rank": 18
+        },
+        {
+          "id": "GlueGunner",
+          "label": "Glue Gunner",
+          "rank": 9
+        },
+        {
+          "id": "HeliPilot",
+          "label": "Heli Pilot",
+          "rank": 20
+        },
+        {
+          "id": "IceTower",
+          "label": "Ice Tower",
+          "rank": 8
+        },
+        {
+          "id": "MonkeyAce",
+          "label": "Monkey Ace",
+          "rank": 12
+        },
+        {
+          "id": "MonkeyApprentice",
+          "label": "Monkey Apprentice",
+          "rank": 14
+        },
+        {
+          "id": "MonkeyBuccaneer",
+          "label": "Monkey Buccaneer",
+          "rank": 11
+        },
+        {
+          "id": "MonkeyEngineer",
+          "label": "Monkey Engineer",
+          "rank": 20
+        },
+        {
+          "id": "MonkeySub",
+          "label": "Monkey Sub",
+          "rank": 1
+        },
+        {
+          "id": "MonkeyVillage",
+          "label": "Monkey Village",
+          "rank": 15
+        },
+        {
+          "id": "MortarTower",
+          "label": "Mortar Tower",
+          "rank": 17
+        },
+        {
+          "id": "NinjaMonkey",
+          "label": "Ninja Monkey",
+          "rank": 6
+        },
+        {
+          "id": "SniperMonkey",
+          "label": "Sniper Monkey",
+          "rank": 3
+        },
+        {
+          "id": "SpikeFactory",
+          "label": "Spike Factory",
+          "rank": 19
+        },
+        {
+          "id": "SuperMonkey",
+          "label": "Super Monkey",
+          "rank": 13
+        },
+        {
+          "id": "TackTower",
+          "label": "Tack Tower",
+          "rank": 2
+        }
+      ]
+    },
+    {
+      "id": "towerUpgrades",
+      "label": "Tower upgrades",
+      "path": "Unlocks.TowerUpgrades",
+      "kind": "towerUpgrades",
+      "apply": true,
+      "items": [
+        {
+          "id": "BananaFarm",
+          "label": "Banana Farm",
+          "maxTier": 4
+        },
+        {
+          "id": "Bloonchipper",
+          "label": "Bloonchipper",
+          "maxTier": 4
+        },
+        {
+          "id": "BombTower",
+          "label": "Bomb Tower",
+          "maxTier": 4
+        },
+        {
+          "id": "BoomerangThrower",
+          "label": "Boomerang Thrower",
+          "maxTier": 4
+        },
+        {
+          "id": "CobraMonkey",
+          "label": "Cobra Monkey",
+          "maxTier": 4
+        },
+        {
+          "id": "DartMonkey",
+          "label": "Dart Monkey",
+          "maxTier": 4
+        },
+        {
+          "id": "DartlingGun",
+          "label": "Dartling Gun",
+          "maxTier": 4
+        },
+        {
+          "id": "GlueGunner",
+          "label": "Glue Gunner",
+          "maxTier": 4
+        },
+        {
+          "id": "HeliPilot",
+          "label": "Heli Pilot",
+          "maxTier": 4
+        },
+        {
+          "id": "IceTower",
+          "label": "Ice Tower",
+          "maxTier": 4
+        },
+        {
+          "id": "MonkeyAce",
+          "label": "Monkey Ace",
+          "maxTier": 4
+        },
+        {
+          "id": "MonkeyApprentice",
+          "label": "Monkey Apprentice",
+          "maxTier": 4
+        },
+        {
+          "id": "MonkeyBuccaneer",
+          "label": "Monkey Buccaneer",
+          "maxTier": 4
+        },
+        {
+          "id": "MonkeyEngineer",
+          "label": "Monkey Engineer",
+          "maxTier": 4
+        },
+        {
+          "id": "MonkeySub",
+          "label": "Monkey Sub",
+          "maxTier": 4
+        },
+        {
+          "id": "MonkeyVillage",
+          "label": "Monkey Village",
+          "maxTier": 4
+        },
+        {
+          "id": "MortarTower",
+          "label": "Mortar Tower",
+          "maxTier": 4
+        },
+        {
+          "id": "NinjaMonkey",
+          "label": "Ninja Monkey",
+          "maxTier": 4
+        },
+        {
+          "id": "SniperMonkey",
+          "label": "Sniper Monkey",
+          "maxTier": 4
+        },
+        {
+          "id": "SpikeFactory",
+          "label": "Spike Factory",
+          "maxTier": 4
+        },
+        {
+          "id": "SuperMonkey",
+          "label": "Super Monkey",
+          "maxTier": 4
+        },
+        {
+          "id": "TackTower",
+          "label": "Tack Tower",
+          "maxTier": 4
+        }
+      ]
+    },
+    {
+      "id": "decals",
+      "label": "Decals",
+      "path": "Unlocks.Decals",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "swords",
+          "label": "Cold Steel"
+        },
+        {
+          "id": "bullrush",
+          "label": "Bull Rush"
+        },
+        {
+          "id": "stormed",
+          "label": "Stormed"
+        },
+        {
+          "id": "golden",
+          "label": "Golden"
+        },
+        {
+          "id": "pickedoff",
+          "label": "Picked Off"
+        },
+        {
+          "id": "laterz",
+          "label": "Laterz"
+        },
+        {
+          "id": "angry",
+          "label": "Angry"
+        },
+        {
+          "id": "smile",
+          "label": "Smile"
+        },
+        {
+          "id": "nuked",
+          "label": "Nuked"
+        },
+        {
+          "id": "supermonkey",
+          "label": "Super Monkey"
+        },
+        {
+          "id": "lol",
+          "label": "Laughable"
+        },
+        {
+          "id": "knight",
+          "label": "Charge"
+        },
+        {
+          "id": "gauntlet",
+          "label": "Gauntlet"
+        },
+        {
+          "id": "burning_love",
+          "label": "Burning Love"
+        },
+        {
+          "id": "twisted_desire",
+          "label": "Twisted Desire"
+        },
+        {
+          "id": "lucky_charm",
+          "label": "Lucky Charm"
+        },
+        {
+          "id": "poppin_paddy",
+          "label": "Poppin' Paddy"
+        },
+        {
+          "id": "easter_bunny",
+          "label": "Easter Bunny"
+        },
+        {
+          "id": "eggcellent",
+          "label": "Eggcellent"
+        },
+        {
+          "id": "monkey_of_liberty",
+          "label": "Monkey of Liberty"
+        },
+        {
+          "id": "feathered_freedom",
+          "label": "Feathered Freedom"
+        },
+        {
+          "id": "boo",
+          "label": "Boo!"
+        },
+        {
+          "id": "count_dartula",
+          "label": "Count Dartula"
+        },
+        {
+          "id": "trick_or_treat",
+          "label": "Trick Or Treat"
+        },
+        {
+          "id": "frankenmonkey",
+          "label": "Frankenmonkey"
+        },
+        {
+          "id": "elf",
+          "label": "Little Helper"
+        },
+        {
+          "id": "reindeer",
+          "label": "Reindeer Games"
+        },
+        {
+          "id": "jack_frost",
+          "label": "Arctic Monkey"
+        },
+        {
+          "id": "st_nick",
+          "label": "Ho Ho Ho! 2.0"
+        },
+        {
+          "id": "bomb",
+          "label": "Festive Surprise"
+        },
+        {
+          "id": "santahat",
+          "label": "Ho Ho Ho!"
+        },
+        {
+          "id": "snowman",
+          "label": "Stay Frosty"
+        },
+        {
+          "id": "skull",
+          "label": "Naughty or Nice"
+        },
+        {
+          "id": "crackingup",
+          "label": "Cracking Up"
+        },
+        {
+          "id": "kingofthesea",
+          "label": "King of the Sea"
+        },
+        {
+          "id": "darkknight",
+          "label": "Dark Knight"
+        },
+        {
+          "id": "backstabber",
+          "label": "Backstabber"
+        },
+        {
+          "id": "bloonception",
+          "label": "Bloonception"
+        },
+        {
+          "id": "ninjakiwi",
+          "label": "Ninja Kiwi"
+        },
+        {
+          "id": "imposter",
+          "label": "BMC Imposter"
+        },
+        {
+          "id": "scalper",
+          "label": "Scalper"
+        },
+        {
+          "id": "heartbreaker",
+          "label": "Heartbreaker"
+        },
+        {
+          "id": "king",
+          "label": "King"
+        },
+        {
+          "id": "queen",
+          "label": "Queen"
+        },
+        {
+          "id": "mockery",
+          "label": "Mockery"
+        },
+        {
+          "id": "scrooge",
+          "label": "Scrooge"
+        },
+        {
+          "id": "exit",
+          "label": "Exit"
+        },
+        {
+          "id": "hardnut",
+          "label": "Hardnut"
+        },
+        {
+          "id": "jugger",
+          "label": "Jugger"
+        },
+        {
+          "id": "nothing_left",
+          "label": "Nothing Left"
+        },
+        {
+          "id": "leakfree",
+          "label": "Leak Free"
+        },
+        {
+          "id": "bloonjaminfranklin",
+          "label": "Bloonjamin Franklin"
+        },
+        {
+          "id": "muthabucca",
+          "label": "Muthabucca"
+        },
+        {
+          "id": "sweettooth",
+          "label": "Sweet Tooth"
+        },
+        {
+          "id": "kerbstomp",
+          "label": "Kerbstomp"
+        },
+        {
+          "id": "medic",
+          "label": "Medic"
+        },
+        {
+          "id": "slippery",
+          "label": "Slippery"
+        },
+        {
+          "id": "slowcoach",
+          "label": "Slowcoach"
+        },
+        {
+          "id": "watchingyou",
+          "label": "Watching You"
+        },
+        {
+          "id": "wasted",
+          "label": "Wasted"
+        },
+        {
+          "id": "candycane",
+          "label": "Candy Cane"
+        },
+        {
+          "id": "holly",
+          "label": "Holly"
+        },
+        {
+          "id": "mrfrosty",
+          "label": "Mr Frosty"
+        },
+        {
+          "id": "snowflake",
+          "label": "Snowflake"
+        },
+        {
+          "id": "stocking",
+          "label": "Stocking"
+        },
+        {
+          "id": "battlemaster",
+          "label": "Battle Master"
+        },
+        {
+          "id": "conquest",
+          "label": "Conquest"
+        },
+        {
+          "id": "magnum",
+          "label": "Magnum"
+        },
+        {
+          "id": "tanked_up",
+          "label": "Tanked Up"
+        },
+        {
+          "id": "mighty",
+          "label": "Mighty"
+        },
+        {
+          "id": "infectious",
+          "label": "Infectious"
+        },
+        {
+          "id": "pyro",
+          "label": "Pyro"
+        },
+        {
+          "id": "toxic",
+          "label": "Toxic"
+        },
+        {
+          "id": "warmingup",
+          "label": "Warming Up"
+        },
+        {
+          "id": "smokin",
+          "label": "Smokin'"
+        },
+        {
+          "id": "ironclad",
+          "label": "Ironclad"
+        },
+        {
+          "id": "rainmaker",
+          "label": "Rainmaker"
+        },
+        {
+          "id": "sailingaway",
+          "label": "Sailing Away"
+        },
+        {
+          "id": "targetpractice",
+          "label": "Target Practice"
+        },
+        {
+          "id": "dracula",
+          "label": "Dracula"
+        },
+        {
+          "id": "giggles",
+          "label": "Giggles"
+        },
+        {
+          "id": "jack",
+          "label": "Jack O' Lantern"
+        },
+        {
+          "id": "yourenext",
+          "label": "You're Next"
+        },
+        {
+          "id": "goodnight",
+          "label": "Goodnight"
+        },
+        {
+          "id": "ko",
+          "label": "K.O."
+        },
+        {
+          "id": "roughneck",
+          "label": "Roughneck"
+        },
+        {
+          "id": "tothepoint",
+          "label": "To the Point"
+        },
+        {
+          "id": "peacebrother",
+          "label": "Peace Brother"
+        },
+        {
+          "id": "spreadthelove",
+          "label": "Spread the Love"
+        },
+        {
+          "id": "teatime",
+          "label": "Tea Time"
+        },
+        {
+          "id": "lightweight",
+          "label": "Lightweight"
+        },
+        {
+          "id": "tunez",
+          "label": "Tunez"
+        },
+        {
+          "id": "australia",
+          "label": "Australia"
+        },
+        {
+          "id": "brazil",
+          "label": "Brazil"
+        },
+        {
+          "id": "canada",
+          "label": "Canada"
+        },
+        {
+          "id": "china",
+          "label": "China"
+        },
+        {
+          "id": "denmark",
+          "label": "Denmark"
+        },
+        {
+          "id": "england",
+          "label": "England"
+        },
+        {
+          "id": "france",
+          "label": "France"
+        },
+        {
+          "id": "germany",
+          "label": "Germany"
+        },
+        {
+          "id": "ireland",
+          "label": "Ireland"
+        },
+        {
+          "id": "israel",
+          "label": "Israel"
+        },
+        {
+          "id": "italy",
+          "label": "Italy"
+        },
+        {
+          "id": "japan",
+          "label": "Japan"
+        },
+        {
+          "id": "korea",
+          "label": "Korean"
+        },
+        {
+          "id": "newzealand",
+          "label": "New Zealand"
+        },
+        {
+          "id": "northern_ireland",
+          "label": "Northern Ireland"
+        },
+        {
+          "id": "norway",
+          "label": "Norway"
+        },
+        {
+          "id": "russia",
+          "label": "Russia"
+        },
+        {
+          "id": "scotland",
+          "label": "Scotland"
+        },
+        {
+          "id": "sweden",
+          "label": "Sweden"
+        },
+        {
+          "id": "uk",
+          "label": "UK"
+        },
+        {
+          "id": "usa",
+          "label": "USA"
+        },
+        {
+          "id": "wales",
+          "label": "Wales"
+        },
+        {
+          "id": "monkey_imposter",
+          "label": "BMC Imposter"
+        },
+        {
+          "id": "imposter_monkey",
+          "label": "BMC Imposter"
+        },
+        {
+          "id": "monkey_king",
+          "label": "Monkey King"
+        },
+        {
+          "id": "diamond",
+          "label": "Bling"
+        }
+      ]
+    },
+    {
+      "id": "decalBundles",
+      "label": "Decal bundles",
+      "path": "Unlocks.DecalBundles",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "bundle_decals_creeps",
+          "label": "Bundle: Creeps"
+        },
+        {
+          "id": "bundle_decals_xmas",
+          "label": "Bundle: Festive"
+        },
+        {
+          "id": "bundle_decals_skirmish",
+          "label": "Bundle: Skirmish"
+        },
+        {
+          "id": "bundle_decals_hazard",
+          "label": "Bundle: Hazard"
+        },
+        {
+          "id": "bundle_decals_naval",
+          "label": "Bundle: Naval"
+        },
+        {
+          "id": "bundle_decals_spooky",
+          "label": "Bundle: Spooky"
+        },
+        {
+          "id": "bundle_decals_tough",
+          "label": "Bundle: Tough"
+        },
+        {
+          "id": "bundle_decals_vibes",
+          "label": "Bundle: Vibes"
+        }
+      ]
+    },
+    {
+      "id": "towerSkins",
+      "label": "Tower skins",
+      "path": "TowerSkinUnlocks",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "BazookaDartlingGun",
+          "label": "Dartling Gun Skin",
+          "tower": "DartlingGun"
+        },
+        {
+          "id": "CandyBananaFarm",
+          "label": "Banana Farm Skin",
+          "tower": "BananaFarm"
+        },
+        {
+          "id": "ChristmasDartMonkey",
+          "label": "Dart Monkey Skin",
+          "tower": "DartMonkey"
+        },
+        {
+          "id": "DrMonkeyEngineer",
+          "label": "Monkey Engineer Skin",
+          "tower": "MonkeyEngineer"
+        },
+        {
+          "id": "EvilSuperMonkey",
+          "label": "Super Monkey Skin",
+          "tower": "SuperMonkey"
+        },
+        {
+          "id": "FireworksMortarTower",
+          "label": "Mortar Tower Skin",
+          "tower": "MortarTower"
+        },
+        {
+          "id": "HunterSniperMonkey",
+          "label": "Sniper Monkey Skin",
+          "tower": "SniperMonkey"
+        },
+        {
+          "id": "MechanicalTackTower",
+          "label": "Tack Tower Skin",
+          "tower": "TackTower"
+        },
+        {
+          "id": "MedievalDartMonkey",
+          "label": "Dart Monkey Skin",
+          "tower": "DartMonkey"
+        },
+        {
+          "id": "MilitaryBombTower",
+          "label": "Bomb Tower Skin",
+          "tower": "BombTower"
+        },
+        {
+          "id": "NavyMonkeyBuccaneer",
+          "label": "Monkey Buccaneer Skin",
+          "tower": "MonkeyBuccaneer"
+        },
+        {
+          "id": "SamuraiNinjaMonkey",
+          "label": "Ninja Monkey Skin",
+          "tower": "NinjaMonkey"
+        },
+        {
+          "id": "SorcererMonkeyApprentice",
+          "label": "Monkey Apprentice Skin",
+          "tower": "MonkeyApprentice"
+        },
+        {
+          "id": "SteampunkMonkeySub",
+          "label": "Monkey Sub Skin",
+          "tower": "MonkeySub"
+        },
+        {
+          "id": "TopgunMonkeyAce",
+          "label": "Monkey Ace Skin",
+          "tower": "MonkeyAce"
+        },
+        {
+          "id": "TribalBoomerangThrower",
+          "label": "Boomerang Thrower Skin",
+          "tower": "BoomerangThrower"
+        },
+        {
+          "id": "UFOHeliPilot",
+          "label": "Heli Pilot Skin",
+          "tower": "HeliPilot"
+        }
+      ]
+    },
+    {
+      "id": "profileSkins",
+      "label": "Profile skins",
+      "path": "ProfileSkinUnlocks",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "Arctic",
+          "label": "Arctic"
+        },
+        {
+          "id": "BarbedWire",
+          "label": "Barbed Wire"
+        },
+        {
+          "id": "Darts",
+          "label": "Darts"
+        },
+        {
+          "id": "Fire",
+          "label": "Fire"
+        },
+        {
+          "id": "Pineapples",
+          "label": "Pineapples"
+        },
+        {
+          "id": "Radioactive",
+          "label": "Radioactive"
+        },
+        {
+          "id": "Skulls",
+          "label": "Skulls"
+        },
+        {
+          "id": "Snakeskin",
+          "label": "Snakeskin"
+        },
+        {
+          "id": "SpikeBalls",
+          "label": "Spike Balls"
+        },
+        {
+          "id": "TigerFur",
+          "label": "Tiger Fur"
+        }
+      ]
+    },
+    {
+      "id": "projectileSkins",
+      "label": "Projectile skins",
+      "path": "ProjectileSkinUnlocks",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "GoldenDarts",
+          "label": "Golden Weapons"
+        },
+        {
+          "id": "SilverDarts",
+          "label": "Silver Weapons"
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "label": "Battle cards",
+      "path": "UnlockedCards",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "0",
+          "label": "Card 0 (DartMonkey / Red)"
+        },
+        {
+          "id": "1",
+          "label": "Card 1 (DartMonkey / Zebra)"
+        },
+        {
+          "id": "2",
+          "label": "Card 2 (DartMonkey / Lead)"
+        },
+        {
+          "id": "3",
+          "label": "Card 3 (DartMonkey / BFB)"
+        },
+        {
+          "id": "4",
+          "label": "Card 4 (TackTower / Blue)"
+        },
+        {
+          "id": "5",
+          "label": "Card 5 (TackTower / Green)"
+        },
+        {
+          "id": "6",
+          "label": "Card 6 (TackTower / Rainbow)"
+        },
+        {
+          "id": "7",
+          "label": "Card 7 (TackTower / Zebra)"
+        },
+        {
+          "id": "8",
+          "label": "Card 8 (BombTower / Black)"
+        },
+        {
+          "id": "9",
+          "label": "Card 9 (BombTower / Pink)"
+        },
+        {
+          "id": "10",
+          "label": "Card 10 (BombTower / MOAB)"
+        },
+        {
+          "id": "11",
+          "label": "Card 11 (BombTower / Rainbow)"
+        },
+        {
+          "id": "12",
+          "label": "Card 12 (MonkeyAce / White)"
+        },
+        {
+          "id": "13",
+          "label": "Card 13 (MonkeyAce / Ceramic)"
+        },
+        {
+          "id": "14",
+          "label": "Card 14 (MonkeyAce / Rainbow)"
+        },
+        {
+          "id": "15",
+          "label": "Card 15 (MonkeyAce / Pink)"
+        },
+        {
+          "id": "16",
+          "label": "Card 16 (MonkeyApprentice / Yellow)"
+        },
+        {
+          "id": "17",
+          "label": "Card 17 (MonkeyApprentice / Lead)"
+        },
+        {
+          "id": "18",
+          "label": "Card 18 (MonkeyApprentice / BFB)"
+        },
+        {
+          "id": "19",
+          "label": "Card 19 (MonkeyApprentice / Ceramic)"
+        },
+        {
+          "id": "20",
+          "label": "Card 20 (NinjaMonkey / Blue)"
+        },
+        {
+          "id": "21",
+          "label": "Card 21 (NinjaMonkey / Yellow)"
+        },
+        {
+          "id": "22",
+          "label": "Card 22 (NinjaMonkey / Lead)"
+        },
+        {
+          "id": "23",
+          "label": "Card 23 (NinjaMonkey / Rainbow)"
+        },
+        {
+          "id": "24",
+          "label": "Card 24 (BananaFarm / Green)"
+        },
+        {
+          "id": "25",
+          "label": "Card 25 (BananaFarm / Pink)"
+        },
+        {
+          "id": "26",
+          "label": "Card 26 (BananaFarm / Ceramic)"
+        },
+        {
+          "id": "27",
+          "label": "Card 27 (BananaFarm / ZOMG)"
+        },
+        {
+          "id": "28",
+          "label": "Card 28 (MonkeySub / Red)"
+        },
+        {
+          "id": "29",
+          "label": "Card 29 (MonkeySub / Blue)"
+        },
+        {
+          "id": "30",
+          "label": "Card 30 (MonkeySub / Lead)"
+        },
+        {
+          "id": "31",
+          "label": "Card 31 (MonkeySub / Lead)"
+        },
+        {
+          "id": "32",
+          "label": "Card 32 (MonkeyBuccaneer / Green)"
+        },
+        {
+          "id": "33",
+          "label": "Card 33 (MonkeyBuccaneer / Rainbow)"
+        },
+        {
+          "id": "34",
+          "label": "Card 34 (MonkeyBuccaneer / Pink)"
+        },
+        {
+          "id": "35",
+          "label": "Card 35 (MonkeyBuccaneer / MOAB)"
+        },
+        {
+          "id": "36",
+          "label": "Card 36 (BoomerangThrower / Blue)"
+        },
+        {
+          "id": "37",
+          "label": "Card 37 (BoomerangThrower / Green)"
+        },
+        {
+          "id": "38",
+          "label": "Card 38 (BoomerangThrower / Black)"
+        },
+        {
+          "id": "39",
+          "label": "Card 39 (BoomerangThrower / White)"
+        },
+        {
+          "id": "40",
+          "label": "Card 40 (MonkeyVillage / Yellow)"
+        },
+        {
+          "id": "41",
+          "label": "Card 41 (MonkeyVillage / Rainbow)"
+        },
+        {
+          "id": "42",
+          "label": "Card 42 (MonkeyVillage / Ceramic)"
+        },
+        {
+          "id": "43",
+          "label": "Card 43 (MonkeyVillage / BFB)"
+        },
+        {
+          "id": "44",
+          "label": "Card 44 (DartlingGun / Lead)"
+        },
+        {
+          "id": "45",
+          "label": "Card 45 (DartlingGun / Pink)"
+        },
+        {
+          "id": "46",
+          "label": "Card 46 (DartlingGun / Ceramic)"
+        },
+        {
+          "id": "47",
+          "label": "Card 47 (DartlingGun / ZOMG)"
+        },
+        {
+          "id": "48",
+          "label": "Card 48 (SpikeFactory / Red)"
+        },
+        {
+          "id": "49",
+          "label": "Card 49 (SpikeFactory / Lead)"
+        },
+        {
+          "id": "50",
+          "label": "Card 50 (SpikeFactory / Zebra)"
+        },
+        {
+          "id": "51",
+          "label": "Card 51 (SpikeFactory / MOAB)"
+        },
+        {
+          "id": "52",
+          "label": "Card 52 (HeliPilot / Rainbow)"
+        },
+        {
+          "id": "53",
+          "label": "Card 53 (HeliPilot / Ceramic)"
+        },
+        {
+          "id": "54",
+          "label": "Card 54 (HeliPilot / Ceramic)"
+        },
+        {
+          "id": "55",
+          "label": "Card 55 (HeliPilot / BFB)"
+        },
+        {
+          "id": "56",
+          "label": "Card 56 (MonkeyEngineer / Blue)"
+        },
+        {
+          "id": "57",
+          "label": "Card 57 (MonkeyEngineer / Pink)"
+        },
+        {
+          "id": "58",
+          "label": "Card 58 (MonkeyEngineer / Black)"
+        },
+        {
+          "id": "59",
+          "label": "Card 59 (MonkeyEngineer / White)"
+        },
+        {
+          "id": "60",
+          "label": "Card 60 (SuperMonkey / Lead)"
+        },
+        {
+          "id": "61",
+          "label": "Card 61 (SuperMonkey / MOAB)"
+        },
+        {
+          "id": "62",
+          "label": "Card 62 (SuperMonkey / BFB)"
+        },
+        {
+          "id": "63",
+          "label": "Card 63 (SuperMonkey / ZOMG)"
+        },
+        {
+          "id": "64",
+          "label": "Card 64 (DartMonkey / Blue)"
+        },
+        {
+          "id": "65",
+          "label": "Card 65 (DartMonkey / Yellow)"
+        },
+        {
+          "id": "66",
+          "label": "Card 66 (BombTower / Pink)"
+        },
+        {
+          "id": "67",
+          "label": "Card 67 (MonkeyApprentice / Black)"
+        },
+        {
+          "id": "68",
+          "label": "Card 68 (NinjaMonkey / Yellow)"
+        },
+        {
+          "id": "69",
+          "label": "Card 69 (BananaFarm / MOAB)"
+        },
+        {
+          "id": "70",
+          "label": "Card 70 (MonkeySub / Zebra)"
+        },
+        {
+          "id": "71",
+          "label": "Card 71 (MonkeyEngineer / ZOMG)"
+        },
+        {
+          "id": "72",
+          "label": "Card 72 (MortarTower / Rainbow)"
+        },
+        {
+          "id": "73",
+          "label": "Card 73 (MortarTower / Blue)"
+        },
+        {
+          "id": "74",
+          "label": "Card 74 (MortarTower / Yellow)"
+        },
+        {
+          "id": "75",
+          "label": "Card 75 (Bloonchipper / Red)"
+        },
+        {
+          "id": "76",
+          "label": "Card 76 (Bloonchipper / Zebra)"
+        },
+        {
+          "id": "77",
+          "label": "Card 77 (IceTower / White)"
+        },
+        {
+          "id": "78",
+          "label": "Card 78 (IceTower / MOAB)"
+        },
+        {
+          "id": "79",
+          "label": "Card 79 (GlueGunner / Red)"
+        },
+        {
+          "id": "80",
+          "label": "Card 80 (GlueGunner / Yellow)"
+        },
+        {
+          "id": "81",
+          "label": "Card 81 (GlueGunner / Pink)"
+        },
+        {
+          "id": "82",
+          "label": "Card 82 (SniperMonkey / Lead)"
+        },
+        {
+          "id": "83",
+          "label": "Card 83 (SniperMonkey / Black)"
+        },
+        {
+          "id": "84",
+          "label": "Card 84 (SniperMonkey / BFB)"
+        },
+        {
+          "id": "85",
+          "label": "Card 85"
+        },
+        {
+          "id": "86",
+          "label": "Card 86"
+        },
+        {
+          "id": "87",
+          "label": "Card 87"
+        },
+        {
+          "id": "88",
+          "label": "Card 88"
+        },
+        {
+          "id": "89",
+          "label": "Card 89"
+        },
+        {
+          "id": "90",
+          "label": "Card 90"
+        },
+        {
+          "id": "91",
+          "label": "Card 91"
+        }
+      ]
+    },
+    {
+      "id": "chatPacks",
+      "label": "Chat packs",
+      "path": "ChatPacks",
+      "kind": "indexList",
+      "apply": true,
+      "items": [
+        {
+          "id": "0",
+          "label": "Default (index 0)",
+          "pack": "Default"
+        },
+        {
+          "id": "1",
+          "label": "Pack2 (index 1)",
+          "pack": "Pack2"
+        }
+      ]
+    },
+    {
+      "id": "guildSymbols",
+      "label": "Guild symbols",
+      "path": "UnlockedGuildSymbolComponents",
+      "kind": "stringList",
+      "apply": true,
+      "items": [
+        {
+          "id": "Colour_01_White",
+          "label": "White (Colour_01_White)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_02_Grey",
+          "label": "Grey (Colour_02_Grey)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_03_Red",
+          "label": "Red (Colour_03_Red)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_04_Pink",
+          "label": "Pink (Colour_04_Pink)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_05_Purple",
+          "label": "Purple (Colour_05_Purple)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_06_DarkBlue",
+          "label": "Dark Blue (Colour_06_DarkBlue)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_07_LightBlue",
+          "label": "Light Blue (Colour_07_LightBlue)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_08_Aqua",
+          "label": "Aqua (Colour_08_Aqua)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_09_Green",
+          "label": "Green (Colour_09_Green)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_10_Lime",
+          "label": "Lime (Colour_10_Lime)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_11_Gold",
+          "label": "Gold (Colour_11_Gold)",
+          "layer": 1
+        },
+        {
+          "id": "Colour_12_Orange",
+          "label": "Orange (Colour_12_Orange)",
+          "layer": 1
+        },
+        {
+          "id": "Icon_01_ODS",
+          "label": "ODS (Icon_01_ODS)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_02_Regen",
+          "label": "Regen (Icon_02_Regen)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_03_Bloonjitsu",
+          "label": "Bloonjitsu (Icon_03_Bloonjitsu)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_04_Sungod",
+          "label": "Sungod (Icon_04_Sungod)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_05_Assassin",
+          "label": "Assassin (Icon_05_Assassin)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_06_BFB",
+          "label": "BFB (Icon_06_BFB)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_07_Blue",
+          "label": "Blue (Icon_07_Blue)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_08_Bomb",
+          "label": "Bomb (Icon_08_Bomb)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_09_Darts",
+          "label": "Darts (Icon_09_Darts)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_10_DartMonkey",
+          "label": "Dart Monkey (Icon_10_DartMonkey)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_11_Mauler",
+          "label": "Mauler (Icon_11_Mauler)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_12_MOAB",
+          "label": "MOAB (Icon_12_MOAB)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_13_Pineapple",
+          "label": "Pineapple (Icon_13_Pineapple)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_14_Red",
+          "label": "Red (Icon_14_Red)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_15_Rockets",
+          "label": "Rockets (Icon_15_Rockets)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_16_Shurikens",
+          "label": "Shurikens (Icon_16_Shurikens)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_17_TechTerror",
+          "label": "Tech Terror (Icon_17_TechTerror)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_18_ZOMG",
+          "label": "ZOMG (Icon_18_ZOMG)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_19_Buccaneer",
+          "label": "Buccaneer (Icon_19_Buccaneer)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_20_Sub",
+          "label": "Sub (Icon_20_Sub)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_21_SuperMonkey",
+          "label": "Super Monkey (Icon_21_SuperMonkey)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_22_NKLogo",
+          "label": "Ninja Kiwi Logo (Icon_22_NKLogo)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_23_NKLogoGold",
+          "label": "Gold Ninja Kiwi Logo (Icon_23_NKLogoGold)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_24_Bombs",
+          "label": "Bombs Logo (Icon_24_Bombs)",
+          "layer": 3
+        },
+        {
+          "id": "Icon_25_Sniper",
+          "label": "Sniper Logo (Icon_25_Sniper)",
+          "layer": 3
+        },
+        {
+          "id": "Pattern_01",
+          "label": "Pattern 01 (Pattern_01)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_02",
+          "label": "Pattern 02 (Pattern_02)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_03",
+          "label": "Pattern 03 (Pattern_03)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_04",
+          "label": "Pattern 04 (Pattern_04)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_05",
+          "label": "Pattern 05 (Pattern_05)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_06",
+          "label": "Pattern 06 (Pattern_06)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_07",
+          "label": "Pattern 07 (Pattern_07)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_08",
+          "label": "Pattern 08 (Pattern_08)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_09",
+          "label": "Pattern 09 (Pattern_09)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_10",
+          "label": "Pattern 10 (Pattern_10)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_11",
+          "label": "Pattern 11 (Pattern_11)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_12",
+          "label": "Pattern 12 (Pattern_12)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_13",
+          "label": "Pattern 13 (Pattern_13)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_14",
+          "label": "Pattern 14 (Pattern_14)",
+          "layer": 0
+        },
+        {
+          "id": "Pattern_15",
+          "label": "Pattern 15 (Pattern_15)",
+          "layer": 0
+        },
+        {
+          "id": "Shield_01",
+          "label": "Shield 01 (Shield_01)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_02",
+          "label": "Shield 02 (Shield_02)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_03",
+          "label": "Shield 03 (Shield_03)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_04",
+          "label": "Shield 04 (Shield_04)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_05",
+          "label": "Shield 05 (Shield_05)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_06",
+          "label": "Shield 06 (Shield_06)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_07",
+          "label": "Shield 07 (Shield_07)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_08",
+          "label": "Shield 08 (Shield_08)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_09",
+          "label": "Shield 09 (Shield_09)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_10",
+          "label": "Shield 10 (Shield_10)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_11",
+          "label": "Shield 11 (Shield_11)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_12",
+          "label": "Shield 12 (Shield_12)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_13",
+          "label": "Shield 13 (Shield_13)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_14",
+          "label": "Shield 14 (Shield_14)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_15",
+          "label": "Shield 15 (Shield_15)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_16",
+          "label": "Shield 16 (Shield_16)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_17",
+          "label": "Shield 17 (Shield_17)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_18",
+          "label": "Shield 18 (Shield_18)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_19",
+          "label": "Shield 19 (Shield_19)",
+          "layer": 2
+        },
+        {
+          "id": "Shield_20",
+          "label": "Shield 20 (Shield_20)",
+          "layer": 2
+        }
+      ]
+    },
+    {
+      "id": "farmers",
+      "label": "Farmers",
+      "path": "Items.TowerInventory",
+      "kind": "towerInventory",
+      "apply": true,
+      "items": [
+        {
+          "id": "MonkeyFarmer",
+          "label": "Monkey Farmer"
+        },
+        {
+          "id": "RoboFarmer",
+          "label": "Robo Farmer"
+        }
+      ]
+    }
+  ]
+}
