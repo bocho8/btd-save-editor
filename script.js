@@ -567,7 +567,24 @@ function sanitizeSave(obj) {
   const now = Math.floor(Date.now() / 1000);
   let cleared = 0, removed = 0, merged = 0, tsUpdated = 0;
 
+  // Merge HVP first so later clears see the restored fields (key order used to re-poison DetectedHacks).
   walkTree(obj, (key, val, parent) => {
+    if (key.toLowerCase() !== 'higherversionprofile' || typeof val !== 'string' || !val.trim()) return;
+    try {
+      const hvp = JSON.parse(val);
+      for (const k of Object.keys(hvp)) {
+        if (parent[k] !== undefined) {
+          parent[k] = hvp[k];
+          merged++;
+        }
+      }
+      delete parent[key];
+    } catch {
+      // invalid HVP JSON; leave as-is
+    }
+  });
+
+  walkTree(obj, (key, _val, parent) => {
     const lower = key.toLowerCase();
 
     if (lower === 'detectedhacks' && parent[key] !== 0) {
@@ -578,21 +595,6 @@ function sanitizeSave(obj) {
     if (lower === 'streamid') {
       delete parent[key];
       removed++;
-    }
-
-    if (lower === 'higherversionprofile' && typeof val === 'string' && val.trim()) {
-      try {
-        const hvp = JSON.parse(val);
-        for (const k of Object.keys(hvp)) {
-          if (parent[k] !== undefined) {
-            parent[k] = hvp[k];
-            merged++;
-          }
-        }
-        delete parent[key];
-      } catch {
-        // invalid HVP JSON; leave as-is
-      }
     }
 
     if (lower === 'datetime' || lower === 'timestamp') {
