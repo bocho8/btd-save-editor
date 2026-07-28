@@ -19,6 +19,7 @@ Steam\userdata\[steamid]\444640\local\Data\Docs\64878ecb93c456c059ea530d
 ```
 
 **Android path:**
+
 ```
 /data/data/com.ninjakiwi.bloonstdbattles/files/64878ecb93c456c059ea530d/
 ```
@@ -27,10 +28,25 @@ Close the game before replacing the file. Keep a backup of the original `Profile
 
 ## Catalogs
 
-`catalogs.json` is generated from a local `Assets/` unpack of `data.jet`:
+`catalogs.json` ships with the site. It is generated from a local `Assets/` unpack of the game’s `data.jet` (premiums, towers, skins, etc. for the reference panel).
 
 ```bash
 npm run extract-catalogs
 ```
 
-`Assets/` and `Assets.zip` are gitignored; only the derived catalogs ship with the site.
+`Assets/` and `Assets.zip` are gitignored; only the derived catalogs are committed.
+
+## Unpacking Android `data.jet`
+
+For regenerating catalogs from an **Android** client build (APK unpack). Steam packaging is different; this script expects Android `libnative.so` (arm64-v8a) and that build’s `data.jet`.
+
+`data.jet` is a ZipCrypto ZIP. The pack password is not a fixed string — each client build embeds a **password seed** in `libnative.so`. The extract script turns that seed into the **pack password**, verifies it with `unzip -t`, and writes `Assets/` for the catalog step above.
+
+```bash
+npm run extract-data-jet -- \
+  --so /path/to/lib/arm64-v8a/libnative.so \
+  --jet /path/to/assets/Assets/data.jet
+npm run extract-catalogs
+```
+
+Use the **same** Android build for both files. `--password-only` prints the pack password and skips writing `Assets/`. Passwords are not checked into this repo.

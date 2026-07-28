@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "extract-data-jet": "python3 scripts/extract-data-jet.py",
     "extract-catalogs": "node scripts/extract-catalogs.mjs"
   }
 }
